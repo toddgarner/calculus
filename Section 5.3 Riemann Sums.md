@@ -10,14 +10,12 @@ We find the exact area under a curve (definite integral) by approximating with r
 ## Key Terms and Formulas
 
 ### Summation Notation
-^summation-notation
 
-![[Figure 5.3.4 - Summation Notation.png]]
+![Figure 5.3.4 - Summation Notation](images/Figure%205.3.4%20-%20Summation%20Notation.png)
 
 ---
 
 ### Integral Notation
-^integral-notation
 
 ```
                     b   ← upper bound
@@ -33,7 +31,6 @@ We find the exact area under a curve (definite integral) by approximating with r
 ---
 
 ### Three Rules for Rectangle Heights
-^rectangle-rules
 
 | Rule                      | Where to measure height |
 | ------------------------- | ----------------------- |
@@ -43,7 +40,7 @@ We find the exact area under a curve (definite integral) by approximating with r
 
 ```
     Left Hand Rule          Right Hand Rule         Midpoint Rule
-    
+
     Heights: 0,3,4,3        Heights: 3,4,3,0       Heights: 1.75,3.75,3.75,1.75
     Sum = 10                Sum = 10               Sum = 11
 ```
@@ -53,7 +50,6 @@ As n → ∞, all three rules converge to the exact integral value.
 ---
 
 ### Key Idea 5.3.1: Core Formulas
-^key-idea-5-3-1
 
 **Width of Each Subinterval (Partition)**
 $$\Delta x = \frac{b-a}{n}$$
@@ -77,7 +73,6 @@ $$\text{Midpoint Rule: } \sum_{i=1}^{n} f\left(\frac{x_i + x_{i+1}}{2}\right)\De
 ---
 
 ### Theorem 5.3.1: Properties of Summations
-^theorem-5-3-1
 
 These formulas let you skip adding up every term!
 
@@ -101,7 +96,6 @@ $$\sum_{i=k}^{n} = \sum_{i=1}^{n} - \sum_{i=1}^{k-1}$$
 ---
 
 ### Taking Limits: The Shortcut
-^taking-limits
 
 When top and bottom have the same highest power of n, just look at the leading coefficients:
 
@@ -112,7 +106,6 @@ The lower order terms (2n, 1) don't matter as n → ∞.
 ---
 
 ## Steps for Riemann Sum Formula Problems
-^riemann-sum-steps
 
 **Given:** $\int_a^b f(x)\,dx$ with n subintervals
 
@@ -136,7 +129,7 @@ $$f(\text{evaluation point}) \cdot \Delta x$$
 **Step 5:** Sum it up
 $$\sum_{i=1}^{n}[\text{area formula}]$$
 
-**Step 6:** Apply [[#^theorem-5-3-1|Theorem 5.3.1]] formulas
+**Step 6:** Apply Theorem 5.3.1 formulas
 
 **Step 7:** Simplify
 
@@ -153,7 +146,7 @@ $$\sum_{i=1}^{n}[\text{area formula}]$$
 
 **Answer: Midpoint**
 
-See [[#^rectangle-rules|Three Rules for Rectangle Heights]].
+See Three Rules for Rectangle Heights.
 
 ---
 
@@ -162,7 +155,7 @@ See [[#^rectangle-rules|Three Rules for Rectangle Heights]].
 
 **Answer: 14**
 
-Using [[#^summation-notation|Summation Notation]], the upper bound is the number on top of the sigma.
+Using Summation Notation, the upper bound is the number on top of the sigma.
 
 ---
 
@@ -171,7 +164,7 @@ Using [[#^summation-notation|Summation Notation]], the upper bound is the number
 
 **Answer: $i^3$**
 
-The summand (what we're adding) is $i^3$. See [[#^summation-notation|Summation Notation]].
+The summand (what we're adding) is $i^3$. See Summation Notation.
 
 ---
 
@@ -180,14 +173,14 @@ The summand (what we're adding) is $i^3$. See [[#^summation-notation|Summation N
 
 **Answer: TRUE**
 
-All three rules (Left, Right, Midpoint) are Riemann Sums. See [[#^rectangle-rules|Three Rules for Rectangle Heights]].
+All three rules (Left, Right, Midpoint) are Riemann Sums. See Three Rules for Rectangle Heights.
 
 ---
 
 ### Problem 5
 > **Evaluate** $\sum_{i=2}^{4} i^2$
 
-Using [[#^summation-notation|Summation Notation]], add up each term:
+Using Summation Notation, add up each term:
 $$2^2 + 3^2 + 4^2 = 4 + 9 + 16 = \boxed{29}$$
 
 ---
@@ -243,7 +236,7 @@ $$\boxed{\sum_{i=1}^{4} \frac{i}{i+1}}$$
 ---
 
 ### Problem 17
-> **Evaluate using [[#^theorem-5-3-1|Theorem 5.3.1]]:** $\sum_{i=1}^{10} 5$
+> **Evaluate using Theorem 5.3.1:** $\sum_{i=1}^{10} 5$
 
 Using Property 1 (constant):
 $$\sum_{i=1}^{n} c = c \cdot n$$
@@ -253,7 +246,7 @@ $$5 \cdot 10 = \boxed{50}$$
 ---
 
 ### Problem 19
-> **Evaluate using [[#^theorem-5-3-1|Theorem 5.3.1]]:** $\sum_{i=1}^{10} (3i^2 - 2i)$
+> **Evaluate using Theorem 5.3.1:** $\sum_{i=1}^{10} (3i^2 - 2i)$
 
 Using Properties 2, 3, 5, and 6:
 $$= 3\sum_{i=1}^{10} i^2 - 2\sum_{i=1}^{10} i$$
@@ -265,7 +258,7 @@ $$= 3 \cdot 385 - 2 \cdot 55 = 1155 - 110 = \boxed{1045}$$
 ---
 
 ### Problem 21
-> **Evaluate using [[#^theorem-5-3-1|Theorem 5.3.1]]:** $\sum_{i=1}^{10} (-4i^3 + 10i^2 - 7i + 11)$
+> **Evaluate using Theorem 5.3.1:** $\sum_{i=1}^{10} (-4i^3 + 10i^2 - 7i + 11)$
 
 Split and apply formulas:
 $$= -4\sum i^3 + 10\sum i^2 - 7\sum i + 11\sum 1$$
@@ -281,7 +274,7 @@ $$= -12100 + 3850 - 385 + 110 = \boxed{-8525}$$
 ### Problem 23
 > **Evaluate:** $1 + 2 + 3 + \cdots + 100$
 
-This is $\sum_{i=1}^{100} i$. Using [[#^theorem-5-3-1|Property 5]]:
+This is $\sum_{i=1}^{100} i$. Using Property 5:
 
 $$\frac{100(101)}{2} = \boxed{5050}$$
 
@@ -300,7 +293,7 @@ $$= \frac{20(21)}{2} - \frac{10(11)}{2} = 210 - 55 = \boxed{155}$$
 ### Problem 27
 > **Evaluate:** $\sum_{i=7}^{12} 4$
 
-Using [[#^theorem-5-3-1|Property 1]]: constant × (number of terms)
+Using Property 1: constant × (number of terms)
 
 Number of terms from 7 to 12 = 6
 
@@ -311,7 +304,7 @@ $$4 \cdot 6 = \boxed{24}$$
 ### Problem 29
 > **Approximate** $\int_{-3}^{3} x^2\, dx$ **using Left Hand Rule with 6 rectangles.**
 
-**Setup:** Using [[#^key-idea-5-3-1|Key Idea 5.3.1]]
+**Setup:** Using Key Idea 5.3.1
 - $\Delta x = \frac{3-(-3)}{6} = 1$
 - Left endpoints: $-3, -2, -1, 0, 1, 2$
 
@@ -331,7 +324,7 @@ $$LHR = \Delta x \cdot \sum f(x_i) = 1 \cdot (9 + 4 + 1 + 0 + 1 + 4) = \boxed{19
 ### Problem 31
 > **Approximate** $\int_0^{\pi} \sin(x)\, dx$ **using Right Hand Rule with 6 rectangles.**
 
-**Setup:** Using [[#^key-idea-5-3-1|Key Idea 5.3.1]]
+**Setup:** Using Key Idea 5.3.1
 - $\Delta x = \frac{\pi - 0}{6} = \frac{\pi}{6}$
 - Right endpoints: $\frac{\pi}{6}, \frac{2\pi}{6}, \frac{3\pi}{6}, \frac{4\pi}{6}, \frac{5\pi}{6}, \pi$
 
@@ -351,7 +344,7 @@ $$RHR = \frac{\pi}{6}\left(\frac{1}{2} + \frac{\sqrt{3}}{2} + 1 + \frac{\sqrt{3}
 ### Problem 33
 > **Approximate** $\int_1^{2} \ln(x)\, dx$ **using Midpoint Rule with 3 rectangles.**
 
-**Setup:** Using [[#^key-idea-5-3-1|Key Idea 5.3.1]]
+**Setup:** Using Key Idea 5.3.1
 - $\Delta x = \frac{2-1}{3} = \frac{1}{3}$
 - Midpoints: $\frac{7}{6}, \frac{9}{6}, \frac{11}{6}$
 
@@ -369,7 +362,7 @@ $$MPR = \frac{1}{3}(0.154 + 0.405 + 0.606) = \frac{1}{3}(1.165) \approx \boxed{0
 > **Find the Riemann Sum formula for** $\int_0^1 x^3\, dx$ **using Right Hand Rule. Then compute for n = 10, 100, 1000 and take the limit.**
 
 **Step 1:** $\Delta x = \frac{1}{n}$
-→ Using [[#^key-idea-5-3-1|Δx = (b-a)/n]] with a=0, b=1
+→ Using Δx = (b-a)/n with a=0, b=1
 
 **Step 2:** $x_{i+1} = \frac{i}{n}$
 → Right Hand Rule: $(a + i \cdot \Delta x)$ — this is the **width (x)**
@@ -384,7 +377,7 @@ $$MPR = \frac{1}{3}(0.154 + 0.405 + 0.606) = \frac{1}{3}(1.165) \approx \boxed{0
 → Sum all the rectangles
 
 **Step 6:** $= \frac{1}{n^4} \cdot \left[\frac{n(n+1)}{2}\right]^2$
-→ Using [[#^theorem-5-3-1|Property 7]] for $\sum i^3$
+→ Using Property 7 for $\sum i^3$
 
 **Step 7:** $= \frac{(n+1)^2}{4n^2}$
 
@@ -393,7 +386,7 @@ $$MPR = \frac{1}{3}(0.154 + 0.405 + 0.606) = \frac{1}{3}(1.165) \approx \boxed{0
 - n = 100 → $\frac{10201}{40000}$ = 0.255025
 - n = 1000 → $\frac{1002001}{4000000}$ = 0.25050025
 
-**Step 9:** Using [[#^taking-limits|Taking Limits]]:
+**Step 9:** Using Taking Limits:
 $$\lim_{n \to \infty} \frac{(n+1)^2}{4n^2} = \boxed{\frac{1}{4}}$$
 
 > [!success] The Pattern
@@ -405,7 +398,7 @@ $$\lim_{n \to \infty} \frac{(n+1)^2}{4n^2} = \boxed{\frac{1}{4}}$$
 > **Find the Riemann Sum formula for** $\int_{-10}^{10} (5-x)\, dx$ **using Right Hand Rule.**
 
 **Step 1:** $\Delta x = \frac{20}{n}$
-→ Using [[#^key-idea-5-3-1|Δx = (b-a)/n]] with a=-10, b=10
+→ Using Δx = (b-a)/n with a=-10, b=10
 
 **Step 2:** $x_{i+1} = -10 + \frac{20i}{n}$
 → Right Hand Rule: $(a + i \cdot \Delta x)$
@@ -417,7 +410,7 @@ $$\lim_{n \to \infty} \frac{(n+1)^2}{4n^2} = \boxed{\frac{1}{4}}$$
 
 **Step 5:** $\sum_{i=1}^{n}\left(\frac{300}{n} - \frac{400i}{n^2}\right) = \frac{300}{n}\sum 1 - \frac{400}{n^2}\sum i$
 
-**Step 6:** Using [[#^theorem-5-3-1|Properties 1 and 5]]:
+**Step 6:** Using Properties 1 and 5:
 $$= \frac{300}{n} \cdot n - \frac{400}{n^2} \cdot \frac{n(n+1)}{2} = 300 - \frac{200(n+1)}{n}$$
 
 **Step 7:** $= 300 - 200 - \frac{200}{n} = 100 - \frac{200}{n}$
@@ -427,11 +420,11 @@ $$= \frac{300}{n} \cdot n - \frac{400}{n^2} \cdot \frac{n(n+1)}{2} = 300 - \frac
 - n = 100 → 98
 - n = 1000 → 99.8
 
-**Step 9:** Using [[#^taking-limits|Taking Limits]]:
+**Step 9:** Using Taking Limits:
 $$\lim_{n \to \infty} \left(100 - \frac{200}{n}\right) = \boxed{100}$$
 
 ---
 
 ## Related Notes
-- [[Section 5.2 The Definite Integral of Calculus]] - Definition of the definite integral
-- [[Section 5.4 The Fundamental Theorem of Calculus]] - Skip Riemann sums with antiderivatives!
+- [Section 5.2 The Definite Integral of Calculus](Section%205.2%20The%20Definite%20Integral%20of%20Calculus.md) - Definition of the definite integral
+- [Section 5.4 The Fundamental Theorem of Calculus](Section%205.4%20The%20Fundamental%20Theorem%20of%20Calculus.md) - Skip Riemann sums with antiderivatives!

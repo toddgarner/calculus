@@ -1,8 +1,8 @@
-`# Section 5.5 Numerical Integration
+# Section 5.5 Numerical Integration
 
 ## The Big Idea
 
-**The core problem:** Sometimes you can't find an antiderivative. Functions like $e^{-x^2}$, $\sin(x^3)$, and $\frac{\sin x}{x}$ have no elementary antiderivatives—the [[Section 5.4 The Fundamental Theorem of Calculus|Fundamental Theorem of Calculus]] can't help you directly.
+**The core problem:** Sometimes you can't find an antiderivative. Functions like $e^{-x^2}$, $\sin(x^3)$, and $\frac{\sin x}{x}$ have no elementary antiderivatives—the [Fundamental Theorem of Calculus](Section%205.4%20The%20Fundamental%20Theorem%20of%20Calculus.md) can't help you directly.
 
 **The solution:** Approximate the definite integral numerically by breaking the interval into pieces and using geometric shapes to estimate the area.
 
@@ -24,7 +24,6 @@ Endpoints: $x_1 = a$, $x_2 = a + \Delta x$, ..., $x_{n+1} = b$
 ---
 
 ### Left Hand Rule
-^left-hand-rule
 
 $$\int_a^b f(x)\,dx \approx \Delta x \left[ f(x_1) + f(x_2) + \cdots + f(x_n) \right]$$
 
@@ -34,7 +33,6 @@ $$\int_a^b f(x)\,dx \approx \Delta x \left[ f(x_1) + f(x_2) + \cdots + f(x_n) \r
 ---
 
 ### Right Hand Rule
-^right-hand-rule
 
 $$\int_a^b f(x)\,dx \approx \Delta x \left[ f(x_2) + f(x_3) + \cdots + f(x_{n+1}) \right]$$
 
@@ -44,18 +42,17 @@ $$\int_a^b f(x)\,dx \approx \Delta x \left[ f(x_2) + f(x_3) + \cdots + f(x_{n+1}
 ---
 
 ### Trapezoidal Rule
-^trapezoidal-rule
 
 $$\int_a^b f(x)\,dx \approx \frac{\Delta x}{2} \left[ f(x_1) + 2f(x_2) + 2f(x_3) + \cdots + 2f(x_n) + f(x_{n+1}) \right]$$
 
 - Approximates $f(x)$ with **linear functions** (trapezoids)
 - Equals the **average of Left and Right Hand Rules**
 - Coefficient pattern: **1, 2, 2, 2, ..., 2, 1**
+- **n can be any positive integer** (no restriction)
 
 ---
 
 ### Simpson's Rule
-^simpsons-rule
 
 $$\int_a^b f(x)\,dx \approx \frac{\Delta x}{3} \left[ f(x_1) + 4f(x_2) + 2f(x_3) + 4f(x_4) + \cdots + 4f(x_n) + f(x_{n+1}) \right]$$
 
@@ -67,7 +64,6 @@ $$\int_a^b f(x)\,dx \approx \frac{\Delta x}{3} \left[ f(x_1) + 4f(x_2) + 2f(x_3)
 ---
 
 ### Error Bounds
-^error-bounds
 
 **Trapezoidal Rule Error:**
 $$E_T \leq \frac{(b-a)^3}{12n^2} M \quad \text{where } M = \max|f''(x)| \text{ on } [a,b]$$
@@ -87,8 +83,8 @@ $$E_S \leq \frac{(b-a)^5}{180n^4} M \quad \text{where } M = \max|f^{(4)}(x)| \te
 | Method | Approximates f with | Coefficient Pattern | Notes |
 |--------|---------------------|---------------------|-------|
 | Left/Right Hand | Constants | All 1's | Obsolete |
-| [[#^trapezoidal-rule\|Trapezoidal]] | Linear | 1, 2, 2, ..., 2, 1 | Average of L/R |
-| [[#^simpsons-rule\|Simpson's]] | Quadratic | 1, 4, 2, 4, ..., 4, 1 | n must be even |
+| Trapezoidal | Linear | 1, 2, 2, ..., 2, 1 | Average of L/R |
+| Simpson's | Quadratic | 1, 4, 2, 4, ..., 4, 1 | n must be even |
 
 ---
 
@@ -99,7 +95,7 @@ $$E_S \leq \frac{(b-a)^5}{180n^4} M \quad \text{where } M = \max|f^{(4)}(x)| \te
 
 **Answer: FALSE**
 
-[[#^simpsons-rule|Simpson's Rule]] approximates **definite integrals** (specific numerical values), not antiderivatives (functions). You get a number, not a function.
+Simpson's Rule approximates **definite integrals** (specific numerical values), not antiderivatives (functions). You get a number, not a function.
 
 ---
 
@@ -115,7 +111,7 @@ $$E_S \leq \frac{(b-a)^5}{180n^4} M \quad \text{where } M = \max|f^{(4)}(x)| \te
 ### Problem 3
 > **Why are the Left and Right Hand Rules rarely used?**
 
-**Answer:** The [[#^trapezoidal-rule|Trapezoidal Rule]] is just as easy to compute and gives better results (it's the average of Left and Right). No practical reason to use inferior methods.
+**Answer:** The Trapezoidal Rule is just as easy to compute and gives better results (it's the average of Left and Right). No practical reason to use inferior methods.
 
 ---
 
@@ -124,14 +120,14 @@ $$E_S \leq \frac{(b-a)^5}{180n^4} M \quad \text{where } M = \max|f^{(4)}(x)| \te
 
 **Answer: Quadratic functions (parabolas)**
 
-[[#^simpsons-rule|Simpson's Rule]] fits a parabola through every three consecutive points.
+Simpson's Rule fits a parabola through every three consecutive points.
 
 ---
 
 ### Problem 9
 > $$\int_0^3 (x^3 + 2x^2 - 5x + 7)\, dx \text{ with } n = 4$$
 
-**Setup:** Using [[#Setup (Used by All Methods)|standard setup]]
+**Setup:** Using standard setup
 - $a = 0$, $b = 3$, $n = 4$
 - $\Delta x = \frac{3-0}{4} = 0.75$
 - Endpoints: $x_1 = 0$, $x_2 = 0.75$, $x_3 = 1.5$, $x_4 = 2.25$, $x_5 = 3$
@@ -145,12 +141,12 @@ Let $f(x) = x^3 + 2x^2 - 5x + 7$
 | 1.5   | 7.375    |
 | 2.25  | 17.266   |
 | 3     | 37       |
-``
-**(a) [[#^trapezoidal-rule|Trapezoidal Rule]]:** (pattern: 1, 2, 2, 2, 1)
+
+**(a) Trapezoidal Rule:** (pattern: 1, 2, 2, 2, 1)
 $$T_4 = \frac{0.75}{2}[7 + 2(4.797) + 2(7.375) + 2(17.266) + 37]$$
 $$= 0.375[7 + 9.594 + 14.75 + 34.532 + 37] = 0.375(102.876) = \boxed{38.58}$$
 
-**(b) [[#^simpsons-rule|Simpson's Rule]]:** (pattern: 1, 4, 2, 4, 1)
+**(b) Simpson's Rule:** (pattern: 1, 4, 2, 4, 1)
 $$S_4 = \frac{0.75}{3}[7 + 4(4.797) + 2(7.375) + 4(17.266) + 37]$$
 $$= 0.25[7 + 19.188 + 14.75 + 69.064 + 37] = 0.25(147) = \boxed{36.75}$$
 
@@ -159,7 +155,7 @@ $$\int_0^3 (x^3 + 2x^2 - 5x + 7)\, dx = \left[\frac{x^4}{4} + \frac{2x^3}{3} - \
 $$= 20.25 + 18 - 22.5 + 21 = \boxed{36.75}$$
 
 > [!success] Simpson's Rule is Exact!
-> Since $f(x)$ is a cubic polynomial (degree 3), [[#^simpsons-rule|Simpson's Rule]] gives the **exact answer**. The 4th derivative is zero, so the [[#^error-bounds|error bound]] is zero.
+> Since $f(x)$ is a cubic polynomial (degree 3), Simpson's Rule gives the **exact answer**. The 4th derivative is zero, so the error bound is zero.
 
 ---
 
@@ -176,10 +172,10 @@ $$= 20.25 + 18 - 22.5 + 21 = \boxed{36.75}$$
 | $3\pi/2$ | 0 |
 | $2\pi$ | 1 |
 
-**(a) [[#^trapezoidal-rule|Trapezoidal Rule]]:**
+**(a) Trapezoidal Rule:**
 $$T_4 = \frac{\pi/2}{2}[1 + 2(0) + 2(-1) + 2(0) + 1] = \frac{\pi}{4}[1 - 2 + 1] = \boxed{0}$$
 
-**(b) [[#^simpsons-rule|Simpson's Rule]]:**
+**(b) Simpson's Rule:**
 $$S_4 = \frac{\pi/2}{3}[1 + 4(0) + 2(-1) + 4(0) + 1] = \frac{\pi}{6}[1 - 2 + 1] = \boxed{0}$$
 
 **(c) Exact value:**
@@ -204,11 +200,11 @@ All methods give the exact answer due to the symmetry of cosine over a full peri
 | 5/6   | 0.6944  | 0.7692        |
 | 1     | 1       | 0.5403        |
 
-**[[#^trapezoidal-rule|Trapezoidal Rule]]:** (pattern: 1, 2, 2, 2, 2, 2, 1)
+**Trapezoidal Rule:** (pattern: 1, 2, 2, 2, 2, 2, 1)
 $$T_6 = \frac{1/6}{2}[1 + 2(0.9996 + 0.9938 + 0.9689 + 0.9022 + 0.7692) + 0.5403]$$
 $$= \frac{1}{12}[1 + 2(4.6337) + 0.5403] = \frac{1}{12}(10.8077) \approx \boxed{0.9006}$$
 
-**[[#^simpsons-rule|Simpson's Rule]]:** (pattern: 1, 4, 2, 4, 2, 4, 1)
+**Simpson's Rule:** (pattern: 1, 4, 2, 4, 2, 4, 1)
 $$S_6 = \frac{1/6}{3}[1 + 4(0.9996) + 2(0.9938) + 4(0.9689) + 2(0.9022) + 4(0.7692) + 0.5403]$$
 $$= \frac{1}{18}[1 + 3.9984 + 1.9876 + 3.8756 + 1.8044 + 3.0768 + 0.5403]$$
 $$= \frac{1}{18}(16.2831) \approx \boxed{0.9046}$$
@@ -230,11 +226,11 @@ $$= \frac{1}{18}(16.2831) \approx \boxed{0.9046}$$
 | 25/6  | 4.2850             |
 | 5     | 5.0990             |
 
-**[[#^trapezoidal-rule|Trapezoidal Rule]]:**
+**Trapezoidal Rule:**
 $$T_6 = \frac{5/6}{2}[1 + 2(1.3017 + 1.9437 + 2.6926 + 3.4801 + 4.2850) + 5.0990]$$
 $$= \frac{5}{12}[1 + 2(13.7031) + 5.0990] = \frac{5}{12}(33.5052) \approx \boxed{13.96}$$
 
-**[[#^simpsons-rule|Simpson's Rule]]:**
+**Simpson's Rule:**
 $$S_6 = \frac{5/6}{3}[1 + 4(1.3017) + 2(1.9437) + 4(2.6926) + 2(3.4801) + 4(4.2850) + 5.0990]$$
 $$= \frac{5}{18}[1 + 5.2068 + 3.8874 + 10.7704 + 6.9602 + 17.14 + 5.0990]$$
 $$= \frac{5}{18}(50.0638) \approx \boxed{13.91}$$
@@ -246,14 +242,14 @@ $$= \frac{5}{18}(50.0638) \approx \boxed{13.91}$$
 
 Let $f(x) = x^{-1/2}$
 
-Using [[#^error-bounds|Error Bounds]]:
+Using Error Bounds:
 
 **(a) Trapezoidal Rule:** Need $f''(x)$ and $M = \max|f''(x)|$
 - $f'(x) = -\frac{1}{2}x^{-3/2}$
 - $f''(x) = \frac{3}{4}x^{-5/2}$
 - On $[1, 4]$, max at $x = 1$: $M = \frac{3}{4}$
 
-Apply [[#^error-bounds|Trapezoidal error formula]]:
+Apply Trapezoidal error formula:
 $$E_T \leq \frac{(4-1)^3}{12n^2} \cdot \frac{3}{4} = \frac{27}{12n^2} \cdot \frac{3}{4} = \frac{27}{16n^2}$$
 
 Set $\frac{27}{16n^2} < 0.0001$:
@@ -266,7 +262,7 @@ $$\boxed{n \geq 130}$$
 - $f^{(4)}(x) = \frac{105}{16}x^{-9/2}$
 - On $[1, 4]$, max at $x = 1$: $M = \frac{105}{16}$
 
-Apply [[#^error-bounds|Simpson's error formula]]:
+Apply Simpson's error formula:
 $$E_S \leq \frac{(4-1)^5}{180n^4} \cdot \frac{105}{16} = \frac{243}{180n^4} \cdot \frac{105}{16} = \frac{25515}{2880n^4}$$
 
 Set $\frac{25515}{2880n^4} < 0.0001$:
@@ -284,13 +280,13 @@ $$\boxed{n \geq 18}$$ (must be even for Simpson's Rule)
 
 Let $f(x) = x^4$
 
-Using [[#^error-bounds|Error Bounds]]:
+Using Error Bounds:
 
 **(a) Trapezoidal Rule:**
 - $f''(x) = 12x^2$
 - On $[0,5]$, max at $x = 5$: $M = 12(25) = 300$
 
-Apply [[#^error-bounds|Trapezoidal error formula]]:
+Apply Trapezoidal error formula:
 $$E_T \leq \frac{(5-0)^3}{12n^2} \cdot 300 = \frac{125 \cdot 300}{12n^2} = \frac{3125}{n^2}$$
 
 Set $\frac{3125}{n^2} < 0.0001$:
@@ -302,7 +298,7 @@ $$\boxed{n \geq 5591}$$
 - $f^{(4)}(x) = 24$ (constant!)
 - $M = 24$
 
-Apply [[#^error-bounds|Simpson's error formula]]:
+Apply Simpson's error formula:
 $$E_S \leq \frac{(5-0)^5}{180n^4} \cdot 24 = \frac{3125 \cdot 24}{180n^4} = \frac{1250}{3n^4}$$
 
 Set $\frac{1250}{3n^4} < 0.0001$:
@@ -322,20 +318,9 @@ $$\boxed{n \geq 46}$$ (must be even)
 | 2 | 1, 2, 1 | 1, 4, 1 |
 | 4 | 1, 2, 2, 2, 1 | 1, 4, 2, 4, 1 |
 | 6 | 1, 2, 2, 2, 2, 2, 1 | 1, 4, 2, 4, 2, 4, 1 |
--
+
 ---
 
 ## Related Notes
-- [[Section 5.3 Riemann Sums]] - Foundation for these methods
-- [[Section 5.4 The Fundamental Theorem of Calculus]] - When you CAN find antiderivatives
-# Trapezoidal Rule
-### Trapezoidal Rule
-^trapezoidal-rule
-
-$$\int_a^b f(x)\,dx \approx \frac{\Delta x}{2} \left[ f(x_1) + 2f(x_2) + 2f(x_3) + \cdots + 2f(x_n) + f(x_{n+1}) \right]$$
-
-- Approximates $f(x)$ with **linear functions** (trapezoids)
-- Equals the **average of Left and Right Hand Rules**
-- Coefficient pattern: **1, 2, 2, 2, ..., 2, 1**
-- **n can be any positive integer** (no restriction)
-
+- [Section 5.3 Riemann Sums](Section%205.3%20Riemann%20Sums.md) - Foundation for these methods
+- [Section 5.4 The Fundamental Theorem of Calculus](Section%205.4%20The%20Fundamental%20Theorem%20of%20Calculus.md) - When you CAN find antiderivatives

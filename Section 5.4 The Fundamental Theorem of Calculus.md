@@ -9,7 +9,6 @@ The Fundamental Theorem of Calculus (FTC) bridges differentiation and integratio
 ## Key Terms and Formulas
 
 ### Integral as a Function
-^integral-as-function
 
 When we let the upper bound of a definite integral vary, we create a function:
 
@@ -17,18 +16,17 @@ $$F(x) = \int_a^x f(t) \, dt$$
 
 This computes the **area under $f$** on the interval $[a, x]$.
 
-![[Figure 5.4.1 - Area Function F(x).png]]
+![Figure 5.4.1 - Area Function F(x)](images/Figure%205.4.1%20-%20Area%20Function%20F(x).png)
 
 **Key Property:** $F(a) = \int_a^a f(t) \, dt = 0$
 
 ---
 
 ### Theorem 5.4.1 — The Fundamental Theorem of Calculus, Part 1
-^ftc-part-1
 
 > [!theorem] FTC Part 1
 > Let $f$ be continuous on $[a, b]$ and let $F(x) = \int_a^x f(t) \, dt$.
-> 
+>
 > Then $F$ is a differentiable function on $(a, b)$, and
 > $$F'(x) = f(x)$$
 
@@ -41,7 +39,6 @@ $$\frac{d}{dx}\left[\int_a^x f(t) \, dt\right] = f(x)$$
 ---
 
 ### Theorem 5.4.2 — The Fundamental Theorem of Calculus, Part 2
-^ftc-part-2
 
 > [!theorem] FTC Part 2
 > Let $f$ be continuous on $[a, b]$ and let $F$ be **any** antiderivative of $f$. Then
@@ -53,7 +50,6 @@ $$\int_a^b f(t) \, dt = \int_a^c f(t) \, dt + \int_c^b f(t) \, dt = -F(a) + F(b)
 ---
 
 ### Evaluation Notation
-^evaluation-notation
 
 | Notation | Meaning |
 |----------|---------|
@@ -68,7 +64,6 @@ $$\int_a^b f(t) \, dt = \int_a^c f(t) \, dt + \int_c^b f(t) \, dt = -F(a) + F(b)
 ---
 
 ### FTC Part 1 with Chain Rule
-^ftc-chain-rule
 
 When the upper limit is a function $g(x)$ instead of just $x$:
 
@@ -93,22 +88,20 @@ $$\frac{d}{dx}\left[\int_a^{g(x)} f(t) \, dt\right] = f(g(x)) \cdot g'(x)$$
 ---
 
 ### Theorem 5.4.3 — Area Between Curves
-^area-between-curves
 
 > [!theorem] Area Between Curves
 > Let $f(x)$ and $g(x)$ be continuous on $[a, b]$ where $f(x) \geq g(x)$ for all $x$ in $[a, b]$.
-> 
+>
 > The area of the region bounded by $y = f(x)$, $y = g(x)$, $x = a$, and $x = b$ is:
 > $$\text{Area} = \int_a^b \left[ f(x) - g(x) \right] dx$$
 
-![[Figure 5.4.2 - Area Between Curves.png]]
+![Figure 5.4.2 - Area Between Curves](images/Figure%205.4.2%20-%20Area%20Between%20Curves.png)
 
 **Logic:** Area between = (Area under top) − (Area under bottom)
 
 ---
 
 ### Theorem 5.4.4 — Mean Value Theorem of Integration
-^mvt-integration
 
 > [!theorem] MVT for Integrals
 > Let $f$ be continuous on $[a, b]$. There exists a value $c$ in $[a, b]$ such that:
@@ -121,12 +114,11 @@ There exists a rectangle with:
 
 whose area **exactly equals** the area under the curve.
 
-![[Figure 5.4.5 - MVT Rectangle.png]]
+![Figure 5.4.5 - MVT Rectangle](images/Figure%205.4.5%20-%20MVT%20Rectangle.png)
 
 ---
 
 ### Definition 5.4.1 — Average Value of a Function
-^average-value
 
 > [!definition] Average Value
 > Let $f$ be continuous on $[a, b]$. The **average value** of $f$ on $[a, b]$ is:
@@ -138,7 +130,6 @@ whose area **exactly equals** the area under the curve.
 ---
 
 ### Motion Applications Summary
-^motion-applications
 
 | Function | Integral Gives |
 |----------|---------------|
@@ -152,7 +143,6 @@ whose area **exactly equals** the area under the curve.
 ---
 
 ### Common Antiderivatives Reference
-^antiderivatives-reference
 
 | Function $f(x)$ | Antiderivative $F(x)$ |
 |-----------------|----------------------|
@@ -174,7 +164,7 @@ whose area **exactly equals** the area under the curve.
 
 **Answer:** We can evaluate a **definite integral** (a number) using an **indefinite integral** (antiderivative).
 
-Using [[#^ftc-part-2|FTC Part 2]]: find the antiderivative $F(x)$, then compute $F(b) - F(a)$.
+Using FTC Part 2: find the antiderivative $F(x)$, then compute $F(b) - F(a)$.
 
 ---
 
@@ -183,7 +173,7 @@ Using [[#^ftc-part-2|FTC Part 2]]: find the antiderivative $F(x)$, then compute 
 
 **Answer:** $C = 0$
 
-The constant cancels when computing $F(b) - F(a)$, so we choose zero for simplicity. See [[#^evaluation-notation|Evaluation Notation]].
+The constant cancels when computing $F(b) - F(a)$, so we choose zero for simplicity. See Evaluation Notation.
 
 ---
 
@@ -192,7 +182,7 @@ The constant cancels when computing $F(b) - F(a)$, so we choose zero for simplic
 
 **Answer: TRUE**
 
-By [[#^ftc-part-1|FTC Part 1]], $F$ is actually **differentiable**, which is even stronger than continuous. (Differentiable implies continuous.)
+By FTC Part 1, $F$ is actually **differentiable**, which is even stronger than continuous. (Differentiable implies continuous.)
 
 ---
 
@@ -200,17 +190,17 @@ By [[#^ftc-part-1|FTC Part 1]], $F$ is actually **differentiable**, which is eve
 > **The definite integral can be used to find "the area under a curve." Give two other uses for definite integrals.**
 
 **Answer:** (Pick any two)
-1. **Displacement** — integrating velocity (see [[#^motion-applications|Motion Applications]])
+1. **Displacement** — integrating velocity (see Motion Applications)
 2. **Change in velocity** — integrating acceleration
-3. **Average value** of a function (see [[#^average-value|Average Value]])
-4. **Area between curves** (see [[#^area-between-curves|Area Between Curves]])
+3. **Average value** of a function (see Average Value)
+4. **Area between curves** (see Area Between Curves)
 
 ---
 
 ### Problem 5
 > $$\int_1^3 (3x^2 - 2x + 1)\,dx$$
 
-Using [[#^ftc-part-2|FTC Part 2]]:
+Using FTC Part 2:
 
 **Step 1:** Find antiderivative
 $$F(x) = x^3 - x^2 + x$$
@@ -242,7 +232,7 @@ $$F(-1) = \frac{1}{4} - \frac{1}{6} = \frac{1}{12}$$
 ### Problem 9
 > $$\int_0^{\pi/4} \sec^2 x\,dx$$
 
-Using [[#^antiderivatives-reference|Antiderivatives Reference]]: antiderivative of $\sec^2 x$ is $\tan x$
+Using Antiderivatives Reference: antiderivative of $\sec^2 x$ is $\tan x$
 
 $$= \tan x \Big|_0^{\pi/4} = \tan\frac{\pi}{4} - \tan 0 = 1 - 0 = \boxed{1}$$
 
@@ -251,7 +241,7 @@ $$= \tan x \Big|_0^{\pi/4} = \tan\frac{\pi}{4} - \tan 0 = 1 - 0 = \boxed{1}$$
 ### Problem 11
 > $$\int_{-1}^{1} 5^x\,dx$$
 
-Using [[#^antiderivatives-reference|Antiderivatives Reference]]: antiderivative of $a^x$ is $\frac{a^x}{\ln a}$
+Using Antiderivatives Reference: antiderivative of $a^x$ is $\frac{a^x}{\ln a}$
 
 $$F(x) = \frac{5^x}{\ln 5}$$
 
@@ -367,7 +357,7 @@ $$= 0 - 0 = \boxed{0}$$
 ### Problem 31
 > **Find a value $c$ guaranteed by the MVT for** $\int_0^2 x^2\,dx$
 
-Using [[#^mvt-integration|MVT for Integrals]]: find $c$ where $f(c)(b-a) = \int_a^b f(x)\,dx$
+Using MVT for Integrals: find $c$ where $f(c)(b-a) = \int_a^b f(x)\,dx$
 
 **Step 1:** Evaluate the integral
 $$\int_0^2 x^2\,dx = \frac{1}{3}x^3\Big|_0^2 = \frac{8}{3}$$
@@ -398,7 +388,7 @@ $$c = \ln(e-1) \approx \boxed{0.54}$$
 ### Problem 38
 > **Find the average value of $y = x^2$ on $[0, 4]$**
 
-Using [[#^average-value|Average Value formula]]:
+Using Average Value formula:
 
 $$f_{\text{avg}} = \frac{1}{b-a}\int_a^b f(x)\,dx = \frac{1}{4-0}\int_0^4 x^2\,dx$$
 
@@ -413,7 +403,7 @@ $$f_{\text{avg}} = \frac{1}{4} \cdot \frac{64}{3} = \boxed{\frac{16}{3}}$$
 ### Problem 41
 > **Find the displacement for $v(t) = -32t + 20$ ft/s on $[0, 5]$**
 
-Using [[#^motion-applications|Motion Applications]]: integrate velocity to get displacement.
+Using Motion Applications: integrate velocity to get displacement.
 
 $$\int_0^5 (-32t + 20)\,dt = \left[-16t^2 + 20t\right]_0^5$$
 
@@ -438,7 +428,7 @@ $$\int_0^3 10\,dt = 10t\Big|_0^3 = 30 - 0 = \boxed{30 \text{ ft}}$$
 ### Problem 49
 > **Find the change in velocity for $a(t) = t$ ft/s² on $[0, 2]$**
 
-Using [[#^motion-applications|Motion Applications]]: integrate acceleration to get change in velocity.
+Using Motion Applications: integrate acceleration to get change in velocity.
 
 $$\int_0^2 t\,dt = \frac{1}{2}t^2\Big|_0^2 = \frac{1}{2}(4) - 0 = \boxed{2 \text{ ft/s}}$$
 
@@ -447,7 +437,7 @@ $$\int_0^2 t\,dt = \frac{1}{2}t^2\Big|_0^2 = \frac{1}{2}(4) - 0 = \boxed{2 \text
 ### Problem 51
 > **Sketch and find the area enclosed by $y = 2x$, $y = 5x$, and $x = 3$**
 
-Using [[#^area-between-curves|Area Between Curves]]:
+Using Area Between Curves:
 
 **The region:** A triangle with vertices at $(0,0)$, $(3, 6)$, and $(3, 15)$.
 
@@ -476,7 +466,7 @@ $$x = 2, \quad x = 5$$
 
 The **line** is on top.
 
-**Step 3:** Integrate using [[#^area-between-curves|Area Between Curves]]
+**Step 3:** Integrate using Area Between Curves
 $$\text{Area} = \int_2^5 [(5x-5) - (x^2-2x+5)]\,dx = \int_2^5 (-x^2 + 7x - 10)\,dx$$
 
 **Antiderivative:** $F(x) = -\frac{1}{3}x^3 + \frac{7}{2}x^2 - 10x$
@@ -493,7 +483,7 @@ $$F(5) - F(2) = -\frac{25}{6} - \left(-\frac{26}{3}\right) = -\frac{25}{6} + \fr
 ### Problem 55
 > **Find $F'(x)$ where $F(x) = \int_2^{x^3+x} \frac{1}{t}\,dt$**
 
-Using [[#^ftc-chain-rule|FTC with Chain Rule]]:
+Using FTC with Chain Rule:
 
 - Integrand: $f(t) = \frac{1}{t}$
 - Upper limit: $g(x) = x^3 + x$
@@ -506,7 +496,7 @@ $$F'(x) = f(g(x)) \cdot g'(x) = \frac{1}{x^3+x} \cdot (3x^2 + 1) = \boxed{\frac{
 ### Problem 57
 > **Find $F'(x)$ where $F(x) = \int_x^{x^2} (t+2)\,dt$**
 
-**Both limits have $x$!** Using [[#^ftc-chain-rule|FTC with Chain Rule]], split at a constant:
+**Both limits have $x$!** Using FTC with Chain Rule, split at a constant:
 
 $$F(x) = \int_0^{x^2}(t+2)\,dt - \int_0^x(t+2)\,dt$$
 
@@ -534,7 +524,6 @@ $$= \boxed{2x^3 + 3x - 2}$$
 
 ## Related Sections
 
-- [[Section 5.2 The Definite Integral of Calculus]]  — Definition via Riemann sums
-- [[Section 5.3 Riemann Sums]] — Approximation methods
-- [[Section 5.5 Numerical Integration]] — When antiderivatives can't be found
-- [[Chapter 6 - Integration Techniques]] — Methods for finding antiderivatives
+- [Section 5.2 The Definite Integral of Calculus](Section%205.2%20The%20Definite%20Integral%20of%20Calculus.md) — Definition via Riemann sums
+- [Section 5.3 Riemann Sums](Section%205.3%20Riemann%20Sums.md) — Approximation methods
+- [Section 5.5 Numerical Integration](Section%205.5%20Numerical%20Integration.md) — When antiderivatives can't be found
